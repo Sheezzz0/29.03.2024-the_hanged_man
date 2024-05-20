@@ -5,11 +5,10 @@ class The_hanged_man():
     def __init__(self):
        self.life = 6
        self.dictionary = ['гуала', 'хоуми', 'блок', 'чаппа', 'лейм', 'гэнг', 'флоу', 'вайб', 'снич', 'шутер', 'факбой', 'хасл']
-       self.the_word = 'ккыыыааа'
+       self.the_word = random.choice(self.dictionary)
        self.hidden_word = "□" * len(self.the_word)
        self.wrong_letters = []
        self.wrong_letters_count = 0
-       ## random.choice(self.dictionary)
     def letter_check(self, letter): # алгоритм показывания букв
         self.the_word_list = list(self.the_word)
         for l in range(len(self.the_word_list)):
